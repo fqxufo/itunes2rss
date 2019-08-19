@@ -8,15 +8,21 @@
     <title>Document</title>
     <script src="./vue.js"></script>
     <script src="./fetch-jsonp.js"></script>
+
+    <style>
+        [v-cloak] {
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
-    <div id="app">
-            <img :src="items.artworkUrl600" alt="poster image">
+    <div id="app" v-cloak>
+        <img :src="items.artworkUrl600" alt="poster image">
         <div v-for='(value, propertyName) in items'>
             {{ propertyName }}: {{ value }}
 
-            
+
         </div>
 
 
