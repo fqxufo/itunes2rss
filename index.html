@@ -12,9 +12,14 @@
 
 <body>
     <div id="app">
+            <img :src="items.artworkUrl600" alt="poster image">
         <div v-for='(value, propertyName) in items'>
             {{ propertyName }}: {{ value }}
+
+            
         </div>
+
+
     </div>
 
     <script>
