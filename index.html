@@ -17,6 +17,10 @@
         .redfont {
             color: red;
         }
+
+        .poster {
+            width: 35%;
+        }
     </style>
 </head>
 
@@ -29,7 +33,7 @@
     <hr>
 
     <div id="app" v-cloak>
-        <img :src="items.artworkUrl600" alt="poster image">
+        <img :src="items.artworkUrl600" alt="poster image" class="poster">
         <div v-for='(value, propertyName) in items' :class='{redfont:propertyName == "feedUrl"}'>
             {{ propertyName }}: {{ value }}
 
