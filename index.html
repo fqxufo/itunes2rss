@@ -13,13 +13,24 @@
         [v-cloak] {
             display: none;
         }
+
+        .redfont {
+            color: red;
+        }
     </style>
 </head>
 
 <body>
+
+    <div class="redfont">
+        Itunes url: https://itunes.apple.com/us/podcast/accidental-tech-podcast/id617416468
+    </div>
+
+    <hr>
+
     <div id="app" v-cloak>
         <img :src="items.artworkUrl600" alt="poster image">
-        <div v-for='(value, propertyName) in items'>
+        <div v-for='(value, propertyName) in items' :class='{redfont:propertyName == "feedUrl"}'>
             {{ propertyName }}: {{ value }}
 
 
